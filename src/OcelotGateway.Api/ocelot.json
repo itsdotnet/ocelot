@@ -1,0 +1,77 @@
+{
+  
+"Routes": [
+    {
+      "UpstreamPathTemplate": "/ocelotapi/notes/create",
+      "DownstreamPathTemplate": "/api/notes/create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+        "Host": "localhost",
+        "Port": 7194
+        }
+      ],
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UpstreamPathTemplate": "/ocelotapi/notes/update",
+      "DownstreamPathTemplate": "/api/notes/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7194
+        }
+      ],
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "UpstreamPathTemplate": "/ocelotapi/notes/delete",
+      "DownstreamPathTemplate": "/api/notes/delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7194
+        }
+      ],
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      "UpstreamPathTemplate": "/ocelotapi/notes/get",
+      "DownstreamPathTemplate": "/api/notes/get",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7194
+        }
+      ],
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UpstreamPathTemplate": "/ocelotapi/notes/getall",
+      "DownstreamPathTemplate": "/api/notes/getall",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7194
+        }
+      ],
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UpstreamPathTemplate": "/ocelotapi/calcs/{any}",
+      "DownstreamPathTemplate": "/api/calcs/{any}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7240
+        }
+      ],
+      "UpstreamHttpMethod": [ "Post" ]
+    }
+  ]
+}
