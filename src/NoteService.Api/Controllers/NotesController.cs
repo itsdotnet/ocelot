@@ -18,18 +18,17 @@ public class NotesController : ControllerBase
     }
 
     [HttpPost("create")]
-
-    public async Task<Response> Create(Note note)
+    public async Task<IActionResult> Create(Note note)
     {
         var newNote = await _dbContext.Notes.AddAsync(note);
         await _dbContext.SaveChangesAsync();
         
-        return new Response
+        return Ok(new Response
         {
             StatusCode = 200,
             Message = "Success",
-            Data = newNote
-        };
+            Data = newNote.Entity
+        });
     }
 
     [HttpPut("update")]

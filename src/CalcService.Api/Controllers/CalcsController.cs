@@ -9,7 +9,7 @@ namespace CalcService.Api.Controllers;
 public class CalcsController
 {
     
-    [HttpPost]
+    [HttpPost("add")]
     public async Task<Response> Add(int a, int b)
     {
         return new Response
@@ -20,7 +20,8 @@ public class CalcsController
         };
     }
 
-    [HttpPost]
+    [HttpPost("separate")]
+
     public async Task<Response> Separate(int a, int b)
     {
         return new Response
@@ -31,7 +32,7 @@ public class CalcsController
         };
     }
     
-    [HttpPost]
+    [HttpPost("div")]
     public async Task<Response> Div(int a, int b)
     {
         return new Response
@@ -42,7 +43,7 @@ public class CalcsController
         };
     }
     
-    [HttpPost]
+    [HttpPost("multiple")]
     public async Task<Response> Multiple(int a, int b)
     {
         return new Response
